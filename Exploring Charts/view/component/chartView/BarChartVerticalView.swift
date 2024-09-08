@@ -3,6 +3,7 @@ import Charts
 
 struct BarChartVerticalView: View {
     let dailySales: [DailySalesType]
+    let barColors: [Color]
     
     var body: some View {
         Chart {
@@ -14,9 +15,10 @@ struct BarChartVerticalView: View {
                 .foregroundStyle(by: valueDay(item))
             }
         }
+        .chartForegroundStyleScale(range: barColors)
     }
 }
 
 #Preview {
-    BarChartVerticalView(dailySales: defaultDailySales)
+    BarChartVerticalView(dailySales: defaultDailySales, barColors: defaultBarColors)
 }

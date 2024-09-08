@@ -23,14 +23,13 @@ struct ChartDemo3: View {
             if isVerticalChart {
                 switch(chartType) {
                 case .area: AreaChartVerticalView(dailySales: dailySales)
-                case .bar: BarChartVerticalView(dailySales: dailySales)
+                case .bar: BarChartVerticalView(dailySales: dailySales, barColors: barColors)
                 case .line: LineChartVerticalView(dailySales: dailySales)
                 }
-                
             } else {
                 switch(chartType) {
                 case .area: AreaChartHorizontaView(dailySales: dailySales)
-                case .bar: BarChartHorizontalView(dailySales: dailySales)
+                case .bar: BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
                 case .line: LineChartHorizontaView(dailySales: dailySales)
                 }
             }
