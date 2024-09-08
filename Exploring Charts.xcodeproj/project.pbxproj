@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */; };
+		FB7177E42C8D8800006E9826 /* ChartWithFrameworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartWithFrameworkView.swift */; };
 		FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */; };
 		FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BB02C8D552300A74EA3 /* ContentView.swift */; };
 		FB8D1BB32C8D552400A74EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1BB22C8D552400A74EA3 /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRectangleView.swift; sourceTree = "<group>"; };
+		FB7177E32C8D8800006E9826 /* ChartWithFrameworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartWithFrameworkView.swift; sourceTree = "<group>"; };
 		FB8D1BAB2C8D552300A74EA3 /* Exploring Charts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exploring Charts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exploring_ChartsApp.swift; sourceTree = "<group>"; };
 		FB8D1BB02C8D552300A74EA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -120,7 +122,6 @@
 				FB8D1BDA2C8D555F00A74EA3 /* model */,
 				FB8D1BD92C8D555A00A74EA3 /* view */,
 				FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */,
-				FB8D1BB02C8D552300A74EA3 /* ContentView.swift */,
 				FB8D1BB22C8D552400A74EA3 /* Assets.xcassets */,
 				FB8D1BB42C8D552400A74EA3 /* Exploring_Charts.entitlements */,
 				FB8D1BB52C8D552400A74EA3 /* Preview Content */,
@@ -157,6 +158,9 @@
 			isa = PBXGroup;
 			children = (
 				FB8D1BE12C8D58EF00A74EA3 /* component */,
+				FB7177E32C8D8800006E9826 /* ChartWithFrameworkView.swift */,
+				FB8D1BB02C8D552300A74EA3 /* ContentView.swift */,
+				FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -198,7 +202,6 @@
 				FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */,
 				FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */,
 				FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */,
-				FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 			files = (
 				FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */,
 				FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */,
+				FB7177E42C8D8800006E9826 /* ChartWithFrameworkView.swift in Sources */,
 				FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */,
 				FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */,
 				FB8D1BEA2C8D599700A74EA3 /* TestColorButtonView.swift in Sources */,
