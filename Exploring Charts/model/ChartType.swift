@@ -1,5 +1,7 @@
 import Foundation
 
-enum ChartType{
-    case bar, line, area
+enum ChartType: String, CaseIterable {
+    case bar = "Bar"
+    case line = "Line"
+    case area = "Area"
 }

@@ -8,6 +8,7 @@ struct ChartDemo3: View {
     let barColors: [Color]
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
+    @State private var charType: ChartType = .bar
     @State private var isVerticalChart = true
     
     var body: some View {
@@ -18,15 +19,42 @@ struct ChartDemo3: View {
             
             Chart {
                 ForEach(dailySales) { item in
-                    BarMark(
-                        x: .value("Day", item.day),
-                        y: .value("Sales", item.sales)
-                    )
-//                    .foregroundStyle(by: .value("Day", item.day))
+                    switch(charType){
+                    case .area:
+                        AreaMark(x: valueDay(item), y: valueSale(item))
+                    case .bar:
+                        BarMark(x: valueDay(item), y: valueSale(item))
+                            .foregroundStyle(by: valueDay(item))
+                    case .line:
+                        LineMark(x: valueDay(item), y: valueSale(item))
+                    }
                 }
             }
+            HStack {
+                ForEach(ChartType.allCases, id: \.self) { itemType in
+                    Button(action: {
+                        charType = itemType
+                    }, label: {
+                        Text(itemType.rawValue)
+                    })
+                    if itemType != ChartType.allCases.last {
+                        Spacer()
+                    }
+                }
+                
+                
+            }
+            .padding()
         }
         .padding()
+    }
+    
+    private func valueDay(_ item: DailySalesType) -> PlottableValue<String> {
+        .value("Day", item.day)
+    }
+    
+    private func valueSale(_ item: DailySalesType) -> PlottableValue<Int> {
+            .value("Sale", item.sales)
     }
 }
 
