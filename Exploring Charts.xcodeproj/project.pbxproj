@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */; };
 		FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */; };
 		FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BB02C8D552300A74EA3 /* ContentView.swift */; };
 		FB8D1BB32C8D552400A74EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1BB22C8D552400A74EA3 /* Assets.xcassets */; };
@@ -18,7 +19,7 @@
 		FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */; };
 		FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */; };
 		FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */; };
-		FB8D1BEA2C8D599700A74EA3 /* TextColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* TextColorButtonView.swift */; };
+		FB8D1BEA2C8D599700A74EA3 /* TestColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRectangleView.swift; sourceTree = "<group>"; };
 		FB8D1BAB2C8D552300A74EA3 /* Exploring Charts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exploring Charts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exploring_ChartsApp.swift; sourceTree = "<group>"; };
 		FB8D1BB02C8D552300A74EA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,7 +56,7 @@
 		FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButtonView.swift; sourceTree = "<group>"; };
 		FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArcFromColorsView.swift; sourceTree = "<group>"; };
 		FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
-		FB8D1BE92C8D599700A74EA3 /* TextColorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColorButtonView.swift; sourceTree = "<group>"; };
+		FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColorButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB7177E02C8D8034006E9826 /* component */ = {
+			isa = PBXGroup;
+			children = (
+				FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */,
+			);
+			path = component;
+			sourceTree = "<group>";
+		};
 		FB8D1BA22C8D552300A74EA3 = {
 			isa = PBXGroup;
 			children = (
@@ -184,10 +194,11 @@
 		FB8D1BE22C8D58FE00A74EA3 /* button */ = {
 			isa = PBXGroup;
 			children = (
+				FB7177E02C8D8034006E9826 /* component */,
 				FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */,
 				FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */,
 				FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */,
-				FB8D1BE92C8D599700A74EA3 /* TextColorButtonView.swift */,
+				FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -326,7 +337,8 @@
 				FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */,
 				FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */,
 				FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */,
-				FB8D1BEA2C8D599700A74EA3 /* TextColorButtonView.swift in Sources */,
+				FB8D1BEA2C8D599700A74EA3 /* TestColorButtonView.swift in Sources */,
+				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,
 				FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */,
 				FB8D1BDE2C8D558000A74EA3 /* ColorExtensions.swift in Sources */,
 			);
