@@ -1,6 +1,6 @@
 import SwiftUI
 
-struct TestColorButtonView: View {
+struct ChartDemo1: View {
     @State var colors: [Color]
     
     @State private var rotateBar: Bool = false
@@ -77,5 +77,5 @@ struct TestColorButtonView: View {
 }
 
 #Preview {
-    TestColorButtonView(colors: Color.defaultColors)
+    ChartDemo1(colors: Color.defaultColors)
 }

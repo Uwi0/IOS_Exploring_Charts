@@ -8,7 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */; };
-		FB7177E42C8D8800006E9826 /* ChartWithFrameworkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartWithFrameworkView.swift */; };
+		FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartDemo2.swift */; };
+		FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E52C8D9201006E9826 /* ChartDemo3.swift */; };
+		FB7177E82C8D9238006E9826 /* Chart3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E72C8D9238006E9826 /* Chart3Model.swift */; };
+		FB7E88032C8DA566007BE5D5 /* ChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E88022C8DA566007BE5D5 /* ChartType.swift */; };
 		FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */; };
 		FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BB02C8D552300A74EA3 /* ContentView.swift */; };
 		FB8D1BB32C8D552400A74EA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8D1BB22C8D552400A74EA3 /* Assets.xcassets */; };
@@ -20,7 +23,7 @@
 		FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */; };
 		FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */; };
 		FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */; };
-		FB8D1BEA2C8D599700A74EA3 /* TestColorButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */; };
+		FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +45,10 @@
 
 /* Begin PBXFileReference section */
 		FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRectangleView.swift; sourceTree = "<group>"; };
-		FB7177E32C8D8800006E9826 /* ChartWithFrameworkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartWithFrameworkView.swift; sourceTree = "<group>"; };
+		FB7177E32C8D8800006E9826 /* ChartDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo2.swift; sourceTree = "<group>"; };
+		FB7177E52C8D9201006E9826 /* ChartDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo3.swift; sourceTree = "<group>"; };
+		FB7177E72C8D9238006E9826 /* Chart3Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chart3Model.swift; sourceTree = "<group>"; };
+		FB7E88022C8DA566007BE5D5 /* ChartType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartType.swift; sourceTree = "<group>"; };
 		FB8D1BAB2C8D552300A74EA3 /* Exploring Charts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exploring Charts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exploring_ChartsApp.swift; sourceTree = "<group>"; };
 		FB8D1BB02C8D552300A74EA3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,7 +64,7 @@
 		FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorfulButtonView.swift; sourceTree = "<group>"; };
 		FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArcFromColorsView.swift; sourceTree = "<group>"; };
 		FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
-		FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestColorButtonView.swift; sourceTree = "<group>"; };
+		FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,9 +164,10 @@
 			isa = PBXGroup;
 			children = (
 				FB8D1BE12C8D58EF00A74EA3 /* component */,
-				FB7177E32C8D8800006E9826 /* ChartWithFrameworkView.swift */,
 				FB8D1BB02C8D552300A74EA3 /* ContentView.swift */,
-				FB8D1BE92C8D599700A74EA3 /* TestColorButtonView.swift */,
+				FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */,
+				FB7177E32C8D8800006E9826 /* ChartDemo2.swift */,
+				FB7177E52C8D9201006E9826 /* ChartDemo3.swift */,
 			);
 			path = view;
 			sourceTree = "<group>";
@@ -168,6 +175,8 @@
 		FB8D1BDA2C8D555F00A74EA3 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FB7177E72C8D9238006E9826 /* Chart3Model.swift */,
+				FB7E88022C8DA566007BE5D5 /* ChartType.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -338,13 +347,16 @@
 			files = (
 				FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */,
 				FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */,
-				FB7177E42C8D8800006E9826 /* ChartWithFrameworkView.swift in Sources */,
+				FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */,
+				FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */,
 				FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */,
 				FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */,
-				FB8D1BEA2C8D599700A74EA3 /* TestColorButtonView.swift in Sources */,
+				FB7E88032C8DA566007BE5D5 /* ChartType.swift in Sources */,
+				FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */,
 				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,
 				FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */,
 				FB8D1BDE2C8D558000A74EA3 /* ColorExtensions.swift in Sources */,
+				FB7177E82C8D9238006E9826 /* Chart3Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

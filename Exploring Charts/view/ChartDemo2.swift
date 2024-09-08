@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct ChartWithFrameworkView: View {
+struct ChartDemo2: View {
     
     let min = 0.0
     let max = 1000.0
@@ -60,5 +60,5 @@ struct ChartWithFrameworkView: View {
 }
 
 #Preview {
-    ChartWithFrameworkView()
+    ChartDemo2()
 }
