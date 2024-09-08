@@ -1,10 +1,3 @@
-//
-//  BarChartVerticalView.swift
-//  Exploring Charts
-//
-//  Created by dwi prasetyo on 09/09/24.
-//
-
 import SwiftUI
 
 struct BarChartVerticalView: View {

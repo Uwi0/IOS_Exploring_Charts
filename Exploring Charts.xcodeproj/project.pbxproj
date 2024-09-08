@@ -24,6 +24,8 @@
 		FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */; };
 		FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */; };
 		FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */; };
+		FBD85F5D2C8E4E1E007A8650 /* BarChartHorizontaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F5C2C8E4E1E007A8650 /* BarChartHorizontaView.swift */; };
+		FBD85F5F2C8E4E50007A8650 /* BarChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F5E2C8E4E50007A8650 /* BarChartVerticalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArcFromColorsView.swift; sourceTree = "<group>"; };
 		FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo1.swift; sourceTree = "<group>"; };
+		FBD85F5C2C8E4E1E007A8650 /* BarChartHorizontaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartHorizontaView.swift; sourceTree = "<group>"; };
+		FBD85F5E2C8E4E50007A8650 /* BarChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartVerticalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +203,7 @@
 		FB8D1BE12C8D58EF00A74EA3 /* component */ = {
 			isa = PBXGroup;
 			children = (
+				FBD85F5B2C8E4DEB007A8650 /* chartView */,
 				FB8D1BE22C8D58FE00A74EA3 /* button */,
 			);
 			path = component;
@@ -213,6 +218,15 @@
 				FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */,
 			);
 			path = button;
+			sourceTree = "<group>";
+		};
+		FBD85F5B2C8E4DEB007A8650 /* chartView */ = {
+			isa = PBXGroup;
+			children = (
+				FBD85F5C2C8E4E1E007A8650 /* BarChartHorizontaView.swift */,
+				FBD85F5E2C8E4E50007A8650 /* BarChartVerticalView.swift */,
+			);
+			path = chartView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,9 +362,11 @@
 				FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */,
 				FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */,
 				FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */,
+				FBD85F5F2C8E4E50007A8650 /* BarChartVerticalView.swift in Sources */,
 				FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */,
 				FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */,
 				FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */,
+				FBD85F5D2C8E4E1E007A8650 /* BarChartHorizontaView.swift in Sources */,
 				FB7E88032C8DA566007BE5D5 /* ChartType.swift in Sources */,
 				FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */,
 				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,

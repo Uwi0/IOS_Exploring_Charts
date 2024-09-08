@@ -5,64 +5,73 @@ struct ChartDemo3: View {
     let dailySales: [DailySalesType]
     let min: Double
     let max: Double
-    let barColors: [Color]
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
     @State private var charType: ChartType = .bar
     @State private var isVerticalChart = true
+    @State private var barColors: [Color] = defaultBarColors
     private var degrees: Angle {
         .degrees(isVerticalChart ? 0 : 90)
     }
     
     var body: some View {
-        VStack let extractedExpr = Chart {
-            ForEach(dailySales) { item in
-                if isVerticalChart {
-                    switch(charType){
-                    case .area:
-                        AreaMark(
-                            x: valueDay(item),
-                            y: valueSale(item)
-                        )
-                    case .bar:
-                        BarMark(
-                            x: valueDay(item),
-                            y: valueSale(item)
-                        ).foregroundStyle(by: valueDay(item))
-                    case .line:
-                        LineMark(
-                            x: valueDay(item),
-                            y: valueSale(item)
-                        )
-                    }
-                } else {
-                    switch(charType){
-                    case .area:
-                        AreaMark(
-                            x: valueSale(item),
-                            y: valueDay(item)
-                        )
-                    case .bar:
-                        BarMark(
-                            x: valueSale(item),
-                            y: valueDay(item)
-                        ).foregroundStyle(by: valueDay(item))
-                    case .line:
-                        LineMark(
-                            x: valueSale(item),
-                            y: valueDay(item)
-                        )
-                    }
-                }
-            }
-        }
-        {
+        VStack {
             Text("Chart Demo 3")
                 .font(.largeTitle)
                 .fontWeight(.semibold)
             
-            extractedExpr
+            Chart {
+                ForEach(dailySales) { item in
+                    if isVerticalChart {
+                        switch(charType){
+                        case .area:
+                            AreaMark(
+                                x: valueDay(item),
+                                y: valueSale(item)
+                            )
+                        case .bar:
+                            BarMark(
+                                x: valueDay(item),
+                                y: valueSale(item)
+                            ).foregroundStyle(by: valueDay(item))
+                        case .line:
+                            LineMark(
+                                x: valueDay(item),
+                                y: valueSale(item)
+                            )
+                        }
+                    } else {
+                        switch(charType){
+                        case .area:
+                            AreaMark(
+                                x: valueSale(item),
+                                y: valueDay(item)
+                            )
+                        case .bar:
+                            BarMark(
+                                x: valueSale(item),
+                                y: valueDay(item)
+                            ).foregroundStyle(by: valueDay(item))
+                        case .line:
+                            LineMark(
+                                x: valueSale(item),
+                                y: valueDay(item)
+                            )
+                        }
+                    }
+                }
+            }
             HStack {
+                ColorfulButtonView(
+                    colors: $barColors,
+                    dim: 30,
+                    offset: 10,
+                    action: {
+                        withAnimation {
+//                            rotateBar.toggle()
+                        }
+                    })
+                Spacer()
                 ForEach(ChartType.allCases, id: \.self) { itemType in
                     Button(action: {
                         charType = itemType
@@ -104,7 +113,6 @@ struct ChartDemo3: View {
     ChartDemo3(
         dailySales: defaultDailySales,
         min: 0.0,
-        max: 700.0,
-        barColors: defaultBarColors
+        max: 700.0
     )
 }
