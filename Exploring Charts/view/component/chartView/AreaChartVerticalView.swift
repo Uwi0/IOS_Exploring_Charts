@@ -1,22 +1,22 @@
 import SwiftUI
 import Charts
 
-struct BarChartVerticalView: View {
+struct AreaChartVerticalView: View {
+    
     let dailySales: [DailySalesType]
     
     var body: some View {
         Chart {
             ForEach(dailySales) { item in
-                BarMark(
+                AreaMark(
                     x: valueDay(item),
                     y: valueSale(item)
                 )
-                .foregroundStyle(by: valueDay(item))
             }
         }
     }
 }
 
 #Preview {
-    BarChartVerticalView(dailySales: defaultDailySales)
+    AreaChartVerticalView(dailySales: defaultDailySales)
 }

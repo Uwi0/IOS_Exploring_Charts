@@ -7,7 +7,7 @@ struct ChartDemo3: View {
     let max: Double
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
-    @State private var charType: ChartType = .bar
+    @State private var chartType: ChartType = .bar
     @State private var isVerticalChart = true
     @State private var barColors: [Color] = defaultBarColors
     private var degrees: Angle {
@@ -20,47 +20,21 @@ struct ChartDemo3: View {
                 .font(.largeTitle)
                 .fontWeight(.semibold)
             
-            Chart {
-                ForEach(dailySales) { item in
-                    if isVerticalChart {
-                        switch(charType){
-                        case .area:
-                            AreaMark(
-                                x: valueDay(item),
-                                y: valueSale(item)
-                            )
-                        case .bar:
-                            BarMark(
-                                x: valueDay(item),
-                                y: valueSale(item)
-                            ).foregroundStyle(by: valueDay(item))
-                        case .line:
-                            LineMark(
-                                x: valueDay(item),
-                                y: valueSale(item)
-                            )
-                        }
-                    } else {
-                        switch(charType){
-                        case .area:
-                            AreaMark(
-                                x: valueSale(item),
-                                y: valueDay(item)
-                            )
-                        case .bar:
-                            BarMark(
-                                x: valueSale(item),
-                                y: valueDay(item)
-                            ).foregroundStyle(by: valueDay(item))
-                        case .line:
-                            LineMark(
-                                x: valueSale(item),
-                                y: valueDay(item)
-                            )
-                        }
-                    }
+            if isVerticalChart {
+                switch(chartType) {
+                case .area: AreaChartVerticalView(dailySales: dailySales)
+                case .bar: BarChartVerticalView(dailySales: dailySales)
+                case .line: LineChartVerticalView(dailySales: dailySales)
+                }
+                
+            } else {
+                switch(chartType) {
+                case .area: AreaChartHorizontaView(dailySales: dailySales)
+                case .bar: BarChartHorizontalView(dailySales: dailySales)
+                case .line: LineChartHorizontaView(dailySales: dailySales)
                 }
             }
+            
             HStack {
                 ColorfulButtonView(
                     colors: $barColors,
@@ -74,7 +48,7 @@ struct ChartDemo3: View {
                 Spacer()
                 ForEach(ChartType.allCases, id: \.self) { itemType in
                     Button(action: {
-                        charType = itemType
+                        chartType = itemType
                     }, label: {
                         Text(itemType.rawValue)
                     })
