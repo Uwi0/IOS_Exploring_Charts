@@ -11,7 +11,7 @@ struct ChartDemo4: View {
     @State private var isVerticalChart = true
     @State private var barColors: [Color] = defaultBarColors
     @State var title = "Chart Title"
-    @State var titleAlignment: HorizontalAlignment = .leading
+    @State var titleAlignment: HorizontalAlignment = .trailing
     
     var body: some View {
         HStack {
@@ -44,7 +44,8 @@ struct ChartDemo4: View {
             
             
             RightChartButtonView(
-                isVerticalMode: $isVerticalChart
+                isVerticalMode: $isVerticalChart,
+                titleAlignment: $titleAlignment
             )
         }.padding()
         

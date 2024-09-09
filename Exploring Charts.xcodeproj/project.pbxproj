@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB209F9C2C8F9BB400642377 /* ButtonAlignmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB209F9B2C8F9BB400642377 /* ButtonAlignmentModel.swift */; };
 		FB31E1102C8EFD1200354509 /* ChartDemo4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E10F2C8EFD1200354509 /* ChartDemo4.swift */; };
 		FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */; };
 		FB31E1142C8F01B400354509 /* RightChartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1132C8F01B400354509 /* RightChartButtonView.swift */; };
+		FB31E1162C8F055400354509 /* TitleAlignmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1152C8F055400354509 /* TitleAlignmentButton.swift */; };
 		FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */; };
 		FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartDemo2.swift */; };
 		FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E52C8D9201006E9826 /* ChartDemo3.swift */; };
@@ -54,9 +56,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FB209F9B2C8F9BB400642377 /* ButtonAlignmentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAlignmentModel.swift; sourceTree = "<group>"; };
 		FB31E10F2C8EFD1200354509 /* ChartDemo4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo4.swift; sourceTree = "<group>"; };
 		FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftChartButtonView.swift; sourceTree = "<group>"; };
 		FB31E1132C8F01B400354509 /* RightChartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChartButtonView.swift; sourceTree = "<group>"; };
+		FB31E1152C8F055400354509 /* TitleAlignmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAlignmentButton.swift; sourceTree = "<group>"; };
 		FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRectangleView.swift; sourceTree = "<group>"; };
 		FB7177E32C8D8800006E9826 /* ChartDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo2.swift; sourceTree = "<group>"; };
 		FB7177E52C8D9201006E9826 /* ChartDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo3.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 			children = (
 				FB7177E72C8D9238006E9826 /* Chart3Model.swift */,
 				FB7E88022C8DA566007BE5D5 /* ChartType.swift */,
+				FB209F9B2C8F9BB400642377 /* ButtonAlignmentModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -235,6 +240,7 @@
 				FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */,
 				FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */,
 				FB31E1132C8F01B400354509 /* RightChartButtonView.swift */,
+				FB31E1152C8F055400354509 /* TitleAlignmentButton.swift */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -392,6 +398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBD85F612C8E53DE007A8650 /* AreaChartHorizontaView.swift in Sources */,
+				FB209F9C2C8F9BB400642377 /* ButtonAlignmentModel.swift in Sources */,
 				FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */,
 				FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */,
 				FBD85F6A2C8E544E007A8650 /* ChartValueHelper.swift in Sources */,
@@ -404,6 +411,7 @@
 				FBD85F5D2C8E4E1E007A8650 /* BarChartHorizontalView.swift in Sources */,
 				FB7E88032C8DA566007BE5D5 /* ChartType.swift in Sources */,
 				FBD85F632C8E53F2007A8650 /* LineChartHorizontaView.swift in Sources */,
+				FB31E1162C8F055400354509 /* TitleAlignmentButton.swift in Sources */,
 				FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */,
 				FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */,
 				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,
