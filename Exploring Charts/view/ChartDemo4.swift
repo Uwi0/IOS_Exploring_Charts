@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct ChartDemo3: View {
+struct ChartDemo4: View {
     let dailySales: [DailySalesType]
     let min: Double
     let max: Double
@@ -75,9 +75,8 @@ struct ChartDemo3: View {
 }
 
 #Preview {
-    ChartDemo3(
+    ChartDemo4(
         dailySales: defaultDailySales,
         min: 0.0,
-        max: 700.0
-    )
+        max: 700.0)
 }

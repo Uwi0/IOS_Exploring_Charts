@@ -20,5 +20,8 @@ struct BarChartHorizontalView: View {
 }
 
 #Preview {
-    BarChartHorizontalView(dailySales: defaultDailySales, barColors: defaultBarColors)
+    BarChartHorizontalView(
+        dailySales: defaultDailySales,
+        barColors: defaultBarColors
+    )
 }
