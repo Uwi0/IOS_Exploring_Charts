@@ -10,66 +10,44 @@ struct ChartDemo4: View {
     @State private var chartType: ChartType = .bar
     @State private var isVerticalChart = true
     @State private var barColors: [Color] = defaultBarColors
-    private var degrees: Angle {
-        .degrees(isVerticalChart ? 0 : 90)
-    }
+    @State var title = "Chart Title"
+    @State var titleAlignment: HorizontalAlignment = .leading
     
     var body: some View {
-        VStack {
-            Text("Chart Demo 3")
-                .font(.largeTitle)
-                .fontWeight(.semibold)
+        HStack {
             
-            if isVerticalChart {
-                switch(chartType) {
-                case .area: AreaChartVerticalView(dailySales: dailySales)
-                case .bar: BarChartVerticalView(dailySales: dailySales, barColors: barColors)
-                case .line: LineChartVerticalView(dailySales: dailySales)
-                }
-            } else {
-                switch(chartType) {
-                case .area: AreaChartHorizontaView(dailySales: dailySales)
-                case .bar: BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
-                case .line: LineChartHorizontaView(dailySales: dailySales)
+            LeftChartButtonView(
+                chartType: $chartType,
+                barColors: $barColors,
+                isVerticalMode: $isVerticalChart
+            )
+            
+            VStack(alignment: titleAlignment) {
+                Text(title)
+                    .font(.headline)
+                    .fontWeight(.semibold)
+                if isVerticalChart {
+                    switch(chartType) {
+                    case .area: AreaChartVerticalView(dailySales: dailySales)
+                    case .bar: BarChartVerticalView(dailySales: dailySales, barColors: barColors)
+                    case .line: LineChartVerticalView(dailySales: dailySales)
+                    }
+                } else {
+                    switch(chartType) {
+                    case .area: AreaChartHorizontaView(dailySales: dailySales)
+                    case .bar: BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
+                    case .line: LineChartHorizontaView(dailySales: dailySales)
+                    }
                 }
             }
             
-            HStack {
-                ColorfulButtonView(
-                    colors: $barColors,
-                    dim: 30,
-                    offset: 10,
-                    action: {
-                        withAnimation {
-//                            rotateBar.toggle()
-                        }
-                    })
-                Spacer()
-                ForEach(ChartType.allCases, id: \.self) { itemType in
-                    Button(action: {
-                        chartType = itemType
-                    }, label: {
-                        Text(itemType.rawValue)
-                    })
-                    .rotationEffect(degrees)
-                    if itemType != ChartType.allCases.last {
-                        Spacer()
-                    }
-                }
-                Spacer()
-                Button(action: {
-                    withAnimation {
-                        isVerticalChart.toggle()
-                    }
-                }, label: {
-                    Image(systemName: "align.vertical.bottom.fill")
-                        .rotationEffect(degrees)
-                })
-                
-            }
-            .padding()
-        }
-        .padding()
+            
+            
+            RightChartButtonView(
+                isVerticalMode: $isVerticalChart
+            )
+        }.padding()
+        
     }
     
 }

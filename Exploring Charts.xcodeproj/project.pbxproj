@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FB31E1102C8EFD1200354509 /* ChartDemo4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E10F2C8EFD1200354509 /* ChartDemo4.swift */; };
+		FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */; };
+		FB31E1142C8F01B400354509 /* RightChartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1132C8F01B400354509 /* RightChartButtonView.swift */; };
 		FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */; };
 		FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartDemo2.swift */; };
 		FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E52C8D9201006E9826 /* ChartDemo3.swift */; };
@@ -53,6 +55,8 @@
 
 /* Begin PBXFileReference section */
 		FB31E10F2C8EFD1200354509 /* ChartDemo4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo4.swift; sourceTree = "<group>"; };
+		FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftChartButtonView.swift; sourceTree = "<group>"; };
+		FB31E1132C8F01B400354509 /* RightChartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChartButtonView.swift; sourceTree = "<group>"; };
 		FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRectangleView.swift; sourceTree = "<group>"; };
 		FB7177E32C8D8800006E9826 /* ChartDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo2.swift; sourceTree = "<group>"; };
 		FB7177E52C8D9201006E9826 /* ChartDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo3.swift; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				FB8D1BE32C8D591400A74EA3 /* ColorfulButtonView.swift */,
 				FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */,
 				FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */,
+				FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */,
+				FB31E1132C8F01B400354509 /* RightChartButtonView.swift */,
 			);
 			path = button;
 			sourceTree = "<group>";
@@ -391,12 +397,14 @@
 				FBD85F6A2C8E544E007A8650 /* ChartValueHelper.swift in Sources */,
 				FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */,
 				FBD85F5F2C8E4E50007A8650 /* BarChartVerticalView.swift in Sources */,
+				FB31E1142C8F01B400354509 /* RightChartButtonView.swift in Sources */,
 				FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */,
 				FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */,
 				FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */,
 				FBD85F5D2C8E4E1E007A8650 /* BarChartHorizontalView.swift in Sources */,
 				FB7E88032C8DA566007BE5D5 /* ChartType.swift in Sources */,
 				FBD85F632C8E53F2007A8650 /* LineChartHorizontaView.swift in Sources */,
+				FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */,
 				FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */,
 				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,
 				FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */,
