@@ -14,11 +14,19 @@ struct BarChartVerticalView: View {
                 )
                 .foregroundStyle(by: valueDay(item))
             }
+            
+            RuleMarkView(
+                selectedDay: "Tues",
+                salesOnSelectedDay: 123.4567,
+                intMode: true
+            )
         }
         .chartForegroundStyleScale(range: barColors)
     }
 }
 
 #Preview {
-    BarChartVerticalView(dailySales: defaultDailySales, barColors: defaultBarColors)
+    VStack {
+        BarChartVerticalView(dailySales: defaultDailySales, barColors: defaultBarColors)
+    }.padding()
 }
