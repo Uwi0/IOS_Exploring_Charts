@@ -15,8 +15,12 @@ struct BarChartVerticalView: View {
     private let min: Double = 0
     private let max: Double = 1000
     
-    var salesOnSelectedDay: Double {
+    private var salesOnSelectedDay: Double {
         getSalesOfSelectedDay(dailySales: dailySales, selectedDay: selectedDay)
+    }
+    
+    private var iconOpacity: CGFloat {
+        isEditMode ? 0.8 : 0.4
     }
     
     var body: some View {
@@ -27,7 +31,14 @@ struct BarChartVerticalView: View {
                     y: valueSale(item)
                 )
                 .foregroundStyle(by: valueDay(item))
+                .annotation(position: .top){
+                    Image(systemName: "circle")
+                        .fontWeight(.bold)
+                        .foregroundStyle(.red)
+                        .opacity(iconOpacity)
+                }
             }
+            
             if isDragging {
                 RuleMarkView(
                     selectedDay: selectedDay,
@@ -73,8 +84,6 @@ struct BarChartVerticalView: View {
                 min: min, 
                 max: max
             )
-            print(newDay)
-            print(sales)
             
         }
     }
