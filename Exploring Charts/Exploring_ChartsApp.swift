@@ -11,7 +11,7 @@ import SwiftUI
 struct Exploring_ChartsApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ChartDemo4()
         }
     }
 }

@@ -2,13 +2,14 @@ import SwiftUI
 import Charts
 
 struct ChartDemo4: View {
-    let dailySales: [DailySalesType]
+    @State private var dailySales: [DailySalesType] = defaultDailySales
     @State private var chartType: ChartType = .bar
     @State private var isVerticalChart = true
     @State private var barColors: [Color] = defaultBarColors
-    @State var title = "Chart Title"
-    @State var titleAlignment: HorizontalAlignment = .trailing
-    @State var isEditMode: Bool = false
+    @State private var title = "Chart Title"
+    @State private var titleAlignment: HorizontalAlignment = .trailing
+    @State private var isEditMode: Bool = false
+    @State private var selectedDay: String = "Sun"
     
     private var editModeIcon: String {
         isEditMode ? "checkmark" : "square.and.pencil"
@@ -28,6 +29,7 @@ struct ChartDemo4: View {
                     }
                 )
                 if !isEditMode {
+                    Spacer()
                     Button(
                         action: {
                             withAnimation {
@@ -57,7 +59,12 @@ struct ChartDemo4: View {
                     if isVerticalChart {
                         switch(chartType) {
                         case .area: AreaChartVerticalView(dailySales: dailySales)
-                        case .bar: BarChartVerticalView(dailySales: dailySales, barColors: barColors)
+                        case .bar: BarChartVerticalView(
+                            barColors: barColors,
+                            isEditMode: isEditMode, 
+                            selectedDay: $selectedDay,
+                            dailySales: $dailySales
+                        )
                         case .line: LineChartVerticalView(dailySales: dailySales)
                         }
                     } else {
@@ -85,5 +92,5 @@ struct ChartDemo4: View {
 }
 
 #Preview {
-    ChartDemo4(dailySales: defaultDailySales)
+    ChartDemo4()
 }

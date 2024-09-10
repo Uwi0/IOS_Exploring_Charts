@@ -2,11 +2,12 @@ import SwiftUI
 import Charts
 
 struct ChartDemo3: View {
-    let dailySales: [DailySalesType]
+    
     let min: Double
     let max: Double
     let xAxisMarkPosition: AxisMarkPosition = .bottom
     let yAxisMarkPosition: AxisMarkPosition = .leading
+    @State private var dailySales: [DailySalesType] = defaultDailySales
     @State private var chartType: ChartType = .bar
     @State private var isVerticalChart = true
     @State private var barColors: [Color] = defaultBarColors
@@ -23,7 +24,12 @@ struct ChartDemo3: View {
             if isVerticalChart {
                 switch(chartType) {
                 case .area: AreaChartVerticalView(dailySales: dailySales)
-                case .bar: BarChartVerticalView(dailySales: dailySales, barColors: barColors)
+                case .bar: BarChartVerticalView(
+                    barColors: barColors,
+                    isEditMode: true,
+                    selectedDay: .constant("Tue"),
+                    dailySales: $dailySales
+                )
                 case .line: LineChartVerticalView(dailySales: dailySales)
                 }
             } else {
@@ -76,7 +82,6 @@ struct ChartDemo3: View {
 
 #Preview {
     ChartDemo3(
-        dailySales: defaultDailySales,
         min: 0.0,
         max: 700.0
     )
