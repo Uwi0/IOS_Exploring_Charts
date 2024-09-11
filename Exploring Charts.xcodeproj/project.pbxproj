@@ -12,6 +12,7 @@
 		FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */; };
 		FB31E1142C8F01B400354509 /* RightChartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1132C8F01B400354509 /* RightChartButtonView.swift */; };
 		FB31E1162C8F055400354509 /* TitleAlignmentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB31E1152C8F055400354509 /* TitleAlignmentButton.swift */; };
+		FB49E3782C9036F0000E064F /* ChartItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB49E3772C9036F0000E064F /* ChartItemModel.swift */; };
 		FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */; };
 		FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartDemo2.swift */; };
 		FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E52C8D9201006E9826 /* ChartDemo3.swift */; };
@@ -62,6 +63,7 @@
 		FB31E1112C8EFE3700354509 /* LeftChartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftChartButtonView.swift; sourceTree = "<group>"; };
 		FB31E1132C8F01B400354509 /* RightChartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightChartButtonView.swift; sourceTree = "<group>"; };
 		FB31E1152C8F055400354509 /* TitleAlignmentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleAlignmentButton.swift; sourceTree = "<group>"; };
+		FB49E3772C9036F0000E064F /* ChartItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartItemModel.swift; sourceTree = "<group>"; };
 		FB7177E12C8D805E006E9826 /* BorderedRectangleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BorderedRectangleView.swift; sourceTree = "<group>"; };
 		FB7177E32C8D8800006E9826 /* ChartDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo2.swift; sourceTree = "<group>"; };
 		FB7177E52C8D9201006E9826 /* ChartDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo3.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				FB7177E72C8D9238006E9826 /* DailySalesType.swift */,
 				FB7E88022C8DA566007BE5D5 /* ChartType.swift */,
 				FB209F9B2C8F9BB400642377 /* ButtonAlignmentModel.swift */,
+				FB49E3772C9036F0000E064F /* ChartItemModel.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -433,6 +436,7 @@
 				FB31E1162C8F055400354509 /* TitleAlignmentButton.swift in Sources */,
 				FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */,
 				FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */,
+				FB49E3782C9036F0000E064F /* ChartItemModel.swift in Sources */,
 				FB7E691A2C8FC51B001CB804 /* RuleMarkView.swift in Sources */,
 				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,
 				FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */,
