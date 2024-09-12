@@ -28,9 +28,9 @@ struct ChartDemo3: View {
                 }
             } else {
                 switch(chartType) {
-                case .area: AreaChartHorizontaView(chartItem: chartItem)
+                case .area: AreaChartHorizontalView(chartItem: chartItem)
                 case .bar: BarChartHorizontalView(chartItem: $chartItem)
-                case .line: LineChartHorizontaView(chartItem: chartItem)
+                case .line: LineChartHorizontalView(chartItem: $chartItem)
                 }
             }
             

@@ -53,9 +53,9 @@ struct ChartDemo4: View {
                         }
                     } else {
                         switch(chartItem.charType) {
-                        case .area: AreaChartHorizontaView(chartItem: chartItem)
+                        case .area: AreaChartHorizontalView(chartItem: chartItem)
                         case .bar: BarChartHorizontalView(chartItem: $chartItem)
-                        case .line: LineChartHorizontaView(chartItem: chartItem)
+                        case .line: LineChartHorizontalView(chartItem: $chartItem)
                         }
                     }
                 }

@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct AreaChartHorizontaView: View {
+struct AreaChartHorizontalView: View {
     
     let chartItem: ChartItemModel
     
@@ -18,5 +18,5 @@ struct AreaChartHorizontaView: View {
 }
 
 #Preview {
-    AreaChartHorizontaView(chartItem: .defaultChartItem)
+    AreaChartHorizontalView(chartItem: .defaultChartItem)
 }
