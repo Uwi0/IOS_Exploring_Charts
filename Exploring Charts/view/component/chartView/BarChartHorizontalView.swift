@@ -2,12 +2,12 @@ import SwiftUI
 import Charts
 
 struct BarChartHorizontalView: View {
-    let dailySales: [DailySalesType]
-    let barColors: [Color]
+    
+    let chartItem: ChartItemModel
     
     var body: some View {
         Chart {
-            ForEach(dailySales) { item in
+            ForEach(chartItem.dailySales) { item in
                 BarMark(
                     x: valueSale(item),
                     y: valueDay(item)
@@ -15,13 +15,10 @@ struct BarChartHorizontalView: View {
                 .foregroundStyle(by: valueDay(item))
             }
         }
-        .chartForegroundStyleScale(range: barColors)
+        .chartForegroundStyleScale(range: chartItem.barColor)
     }
 }
 
 #Preview {
-    BarChartHorizontalView(
-        dailySales: defaultDailySales,
-        barColors: defaultBarColors
-    )
+    BarChartHorizontalView(chartItem: defaultChartItem)
 }

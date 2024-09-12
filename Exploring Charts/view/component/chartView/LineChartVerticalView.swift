@@ -2,11 +2,12 @@ import SwiftUI
 import Charts
 
 struct LineChartVerticalView: View {
-    let dailySales: [DailySalesType]
+    
+    let chartItem: ChartItemModel
     
     var body: some View {
         Chart {
-            ForEach(dailySales) { item in
+            ForEach(chartItem.dailySales) { item in
                 LineMark(
                     x: valueDay(item),
                     y: valueSale(item)
@@ -17,5 +18,5 @@ struct LineChartVerticalView: View {
 }
 
 #Preview {
-    LineChartVerticalView(dailySales: defaultDailySales)
+    LineChartVerticalView(chartItem: defaultChartItem)
 }

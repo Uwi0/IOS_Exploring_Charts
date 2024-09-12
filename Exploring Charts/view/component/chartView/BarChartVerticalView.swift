@@ -3,11 +3,7 @@ import Charts
 
 struct BarChartVerticalView: View {
     
-    let barColors: [Color]
-    let isEditMode: Bool
-    @Binding var selectedDay: String
-    @Binding var dailySales: [DailySalesType]
-    
+    @Binding var chartItem: ChartItemModel
     
     private let innerProxyColor: Color = .clear
     @State private var isDragging: Bool = false
@@ -16,16 +12,19 @@ struct BarChartVerticalView: View {
     private let max: Double = 1000
     
     private var salesOnSelectedDay: Double {
-        getSalesOfSelectedDay(dailySales: dailySales, selectedDay: selectedDay)
+        getSalesOfSelectedDay(
+            dailySales: chartItem.dailySales,
+            selectedDay: chartItem.selectedDay
+        )
     }
     
     private var iconOpacity: CGFloat {
-        isEditMode ? 0.8 : 0.4
+        chartItem.editMode ? 0.8 : 0.4
     }
     
     var body: some View {
         Chart {
-            ForEach(dailySales) { item in
+            ForEach(chartItem.dailySales) { item in
                 BarMark(
                     x: valueDay(item),
                     y: valueSale(item)
@@ -41,14 +40,14 @@ struct BarChartVerticalView: View {
             
             if isDragging {
                 RuleMarkView(
-                    selectedDay: selectedDay,
+                    selectedDay: chartItem.selectedDay,
                     salesOnSelectedDay: salesOnSelectedDay,
                     intMode: true
                 )
             }
             
         }
-        .chartForegroundStyleScale(range: barColors)
+        .chartForegroundStyleScale(range: chartItem.barColor)
         .chartYScale(domain: min ... max)
         .chartOverlay { proxy in
             ChartOverLay(proxy: proxy)
@@ -72,14 +71,14 @@ struct BarChartVerticalView: View {
     }
     
     private func onRuleMarkDragged(value: DragGesture.Value, proxy: ChartProxy){
-        if isEditMode {
+        if chartItem.editMode {
             isDragging = true
             let location = value.location
             let (newDay, sales) = newDayAndSale(location: location, proxy: proxy)
-            selectedDay = newDay
+            chartItem.selectedDay = newDay
             setSalesOfSelectedDay(
-                dailySales: &dailySales,
-                selectedDay: selectedDay,
+                dailySales: &chartItem.dailySales,
+                selectedDay: chartItem.selectedDay,
                 sales: sales,
                 min: min, 
                 max: max
@@ -104,10 +103,7 @@ struct BarChartVerticalView: View {
 #Preview {
     VStack {
         BarChartVerticalView(
-            barColors: defaultBarColors,
-            isEditMode: true,
-            selectedDay: .constant("Tues"),
-            dailySales: .constant(defaultDailySales)
+            chartItem: .constant(defaultChartItem)
         )
     }.padding()
 }

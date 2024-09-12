@@ -11,3 +11,14 @@ struct ChartItemModel: Identifiable {
     var charType: ChartType
     var isVerticalChart: Bool
 }
+
+let defaultChartItem = ChartItemModel(
+    dailySales: defaultDailySales,
+    barColor: defaultBarColors,
+    editMode: true,
+    selectedDay: "Sun",
+    title: "Chart 4 Demo",
+    titleAlignment: .leading,
+    charType: .bar,
+    isVerticalChart: true
+)

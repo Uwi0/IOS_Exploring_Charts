@@ -5,8 +5,7 @@ struct ChartDemo3: View {
     
     let min: Double
     let max: Double
-    let xAxisMarkPosition: AxisMarkPosition = .bottom
-    let yAxisMarkPosition: AxisMarkPosition = .leading
+    @State private var chartItem: ChartItemModel = defaultChartItem
     @State private var dailySales: [DailySalesType] = defaultDailySales
     @State private var chartType: ChartType = .bar
     @State private var isVerticalChart = true
@@ -23,20 +22,15 @@ struct ChartDemo3: View {
             
             if isVerticalChart {
                 switch(chartType) {
-                case .area: AreaChartVerticalView(dailySales: dailySales)
-                case .bar: BarChartVerticalView(
-                    barColors: barColors,
-                    isEditMode: true,
-                    selectedDay: .constant("Tue"),
-                    dailySales: $dailySales
-                )
-                case .line: LineChartVerticalView(dailySales: dailySales)
+                case .area: AreaChartVerticalView(chartItem: chartItem)
+                case .bar: BarChartVerticalView(chartItem: $chartItem)
+                case .line: LineChartVerticalView(chartItem: chartItem)
                 }
             } else {
                 switch(chartType) {
-                case .area: AreaChartHorizontaView(dailySales: dailySales)
-                case .bar: BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
-                case .line: LineChartHorizontaView(dailySales: dailySales)
+                case .area: AreaChartHorizontaView(chartItem: chartItem)
+                case .bar: BarChartHorizontalView(chartItem: chartItem)
+                case .line: LineChartHorizontaView(chartItem: chartItem)
                 }
             }
             

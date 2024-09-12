@@ -2,21 +2,17 @@ import SwiftUI
 
 struct LeftChartButtonView: View {
     
-    
-    @Binding var chartType: ChartType
-    @Binding var barColors: [Color]
-    @Binding var isVerticalMode: Bool
+    @Binding var chartItem: ChartItemModel
     private var degrees: Angle {
-        .degrees(isVerticalMode ? 0 : 90)
+        .degrees(chartItem.isVerticalChart ? 0 : 90)
     }
     
     var body: some View {
         VStack {
-
             
             ForEach(ChartType.allCases, id: \.self) { itemType in
                 Button(action: {
-                    chartType = itemType
+                    chartItem.charType = itemType
                 }, label: {
                     Text(itemType.rawValue)
                 })
@@ -27,14 +23,11 @@ struct LeftChartButtonView: View {
             }
             Spacer()
             ColorfulButtonView(
-                colors: $barColors,
+                colors: $chartItem.barColor,
                 dim: 30,
                 offset: 10,
-                action: {
-                    withAnimation {
-//                            rotateBar.toggle()
-                    }
-                })
+                action: {}
+            )
             
         }
         .padding()
@@ -43,11 +36,7 @@ struct LeftChartButtonView: View {
 
 #Preview {
     HStack {
-        LeftChartButtonView(
-            chartType: .constant(.bar),
-            barColors: .constant(defaultBarColors), 
-            isVerticalMode: .constant(true)
-        )
+        LeftChartButtonView(chartItem: .constant(defaultChartItem))
         Spacer()
     }
 }

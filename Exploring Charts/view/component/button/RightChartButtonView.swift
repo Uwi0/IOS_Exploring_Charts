@@ -1,10 +1,11 @@
 import SwiftUI
 
 struct RightChartButtonView: View {
-    @Binding var isVerticalMode: Bool
-    @Binding var titleAlignment: HorizontalAlignment
+    
+    @Binding var chartItem: ChartItemModel
+    
     private var degrees: Angle {
-        .degrees(isVerticalMode ? 0 : 90)
+        .degrees(chartItem.isVerticalChart ? 0 : 90)
     }
     
     var body: some View {
@@ -12,7 +13,7 @@ struct RightChartButtonView: View {
             Button(
                 action: {
                 withAnimation {
-                    isVerticalMode.toggle()
+                    chartItem.isVerticalChart.toggle()
                 }
             }, 
                 label: {
@@ -20,7 +21,7 @@ struct RightChartButtonView: View {
                     .rotationEffect(degrees)
                     
             })
-            TitleAlignmentButton(titleAlignment: $titleAlignment)
+            TitleAlignmentButton(titleAlignment: $chartItem.titleAlignment)
         }
         .padding()
     }
@@ -29,9 +30,6 @@ struct RightChartButtonView: View {
 #Preview {
     HStack {
         Spacer()
-        RightChartButtonView(
-            isVerticalMode: .constant(true),
-            titleAlignment: .constant(.leading)
-        )
+        RightChartButtonView(chartItem: .constant(defaultChartItem))
     }
 }

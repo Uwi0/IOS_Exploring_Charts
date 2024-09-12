@@ -2,17 +2,10 @@ import SwiftUI
 import Charts
 
 struct ChartDemo4: View {
-    @State private var dailySales: [DailySalesType] = defaultDailySales
-    @State private var chartType: ChartType = .bar
-    @State private var isVerticalChart = true
-    @State private var barColors: [Color] = defaultBarColors
-    @State private var title = "Chart Title"
-    @State private var titleAlignment: HorizontalAlignment = .trailing
-    @State private var isEditMode: Bool = false
-    @State private var selectedDay: String = "Sun"
+    @State private var chartItem = defaultChartItem
     
     private var editModeIcon: String {
-        isEditMode ? "checkmark" : "square.and.pencil"
+        chartItem.editMode ? "checkmark" : "square.and.pencil"
     }
     
     var body: some View {
@@ -21,14 +14,14 @@ struct ChartDemo4: View {
                 Button(
                     action: {
                         withAnimation {
-                            isEditMode.toggle()
+                            chartItem.editMode.toggle()
                         }
                     },
                     label: {
                         Image(systemName: editModeIcon)
                     }
                 )
-                if !isEditMode {
+                if !chartItem.editMode {
                     Spacer()
                     Button(
                         action: {
@@ -44,43 +37,31 @@ struct ChartDemo4: View {
             }
             HStack {
                 
-                if isEditMode {
-                    LeftChartButtonView(
-                        chartType: $chartType,
-                        barColors: $barColors,
-                        isVerticalMode: $isVerticalChart
-                    )
+                if chartItem.editMode {
+                    LeftChartButtonView(chartItem: $chartItem)
                 }
                 
-                VStack(alignment: titleAlignment) {
-                    Text(title)
+                VStack(alignment: chartItem.titleAlignment) {
+                    Text(chartItem.title)
                         .font(.headline)
                         .fontWeight(.semibold)
-                    if isVerticalChart {
-                        switch(chartType) {
-                        case .area: AreaChartVerticalView(dailySales: dailySales)
-                        case .bar: BarChartVerticalView(
-                            barColors: barColors,
-                            isEditMode: isEditMode, 
-                            selectedDay: $selectedDay,
-                            dailySales: $dailySales
-                        )
-                        case .line: LineChartVerticalView(dailySales: dailySales)
+                    if chartItem.isVerticalChart {
+                        switch(chartItem.charType) {
+                        case .area: AreaChartVerticalView(chartItem: chartItem)
+                        case .bar: BarChartVerticalView(chartItem: $chartItem)
+                        case .line: LineChartVerticalView(chartItem: chartItem)
                         }
                     } else {
-                        switch(chartType) {
-                        case .area: AreaChartHorizontaView(dailySales: dailySales)
-                        case .bar: BarChartHorizontalView(dailySales: dailySales, barColors: barColors)
-                        case .line: LineChartHorizontaView(dailySales: dailySales)
+                        switch(chartItem.charType) {
+                        case .area: AreaChartHorizontaView(chartItem: chartItem)
+                        case .bar: BarChartHorizontalView(chartItem: chartItem)
+                        case .line: LineChartHorizontaView(chartItem: chartItem)
                         }
                     }
                 }
                 
-                if isEditMode {
-                    RightChartButtonView(
-                        isVerticalMode: $isVerticalChart,
-                        titleAlignment: $titleAlignment
-                    )
+                if chartItem.editMode {
+                    RightChartButtonView(chartItem: $chartItem)
                 }
                 
             }.padding()

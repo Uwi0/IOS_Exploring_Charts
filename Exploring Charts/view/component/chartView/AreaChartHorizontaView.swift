@@ -3,11 +3,11 @@ import Charts
 
 struct AreaChartHorizontaView: View {
     
-    let dailySales: [DailySalesType]
+    let chartItem: ChartItemModel
     
     var body: some View {
         Chart {
-            ForEach(dailySales) { item in
+            ForEach(chartItem.dailySales) { item in
                 AreaMark(
                     x: valueSale(item),
                     y: valueDay(item)
@@ -18,5 +18,5 @@ struct AreaChartHorizontaView: View {
 }
 
 #Preview {
-    AreaChartHorizontaView(dailySales: defaultDailySales)
+    AreaChartHorizontaView(chartItem: defaultChartItem)
 }
