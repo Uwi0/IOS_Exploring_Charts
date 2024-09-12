@@ -18,5 +18,5 @@ struct LineChartVerticalView: View {
 }
 
 #Preview {
-    LineChartVerticalView(chartItem: defaultChartItem)
+    LineChartVerticalView(chartItem: .defaultChartItem)
 }

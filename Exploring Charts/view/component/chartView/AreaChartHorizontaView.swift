@@ -18,5 +18,5 @@ struct AreaChartHorizontaView: View {
 }
 
 #Preview {
-    AreaChartHorizontaView(chartItem: defaultChartItem)
+    AreaChartHorizontaView(chartItem: .defaultChartItem)
 }

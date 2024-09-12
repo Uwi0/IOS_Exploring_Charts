@@ -17,7 +17,7 @@
 		FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E32C8D8800006E9826 /* ChartDemo2.swift */; };
 		FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E52C8D9201006E9826 /* ChartDemo3.swift */; };
 		FB7177E82C8D9238006E9826 /* DailySalesType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7177E72C8D9238006E9826 /* DailySalesType.swift */; };
-		FB7E691A2C8FC51B001CB804 /* RuleMarkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E69192C8FC51B001CB804 /* RuleMarkView.swift */; };
+		FB7E691A2C8FC51B001CB804 /* RuleMarkVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E69192C8FC51B001CB804 /* RuleMarkVerticalView.swift */; };
 		FB7E88032C8DA566007BE5D5 /* ChartType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7E88022C8DA566007BE5D5 /* ChartType.swift */; };
 		FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */; };
 		FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BB02C8D552300A74EA3 /* ContentView.swift */; };
@@ -38,6 +38,7 @@
 		FBD85F652C8E5404007A8650 /* AreaChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F642C8E5404007A8650 /* AreaChartVerticalView.swift */; };
 		FBD85F672C8E5416007A8650 /* LineChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F662C8E5416007A8650 /* LineChartVerticalView.swift */; };
 		FBD85F6A2C8E544E007A8650 /* ChartValueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F692C8E544E007A8650 /* ChartValueHelper.swift */; };
+		FBE49B9D2C93114B00100DCB /* RuleMarkHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE49B9C2C93114B00100DCB /* RuleMarkHorizontalView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +69,7 @@
 		FB7177E32C8D8800006E9826 /* ChartDemo2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo2.swift; sourceTree = "<group>"; };
 		FB7177E52C8D9201006E9826 /* ChartDemo3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo3.swift; sourceTree = "<group>"; };
 		FB7177E72C8D9238006E9826 /* DailySalesType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySalesType.swift; sourceTree = "<group>"; };
-		FB7E69192C8FC51B001CB804 /* RuleMarkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleMarkView.swift; sourceTree = "<group>"; };
+		FB7E69192C8FC51B001CB804 /* RuleMarkVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleMarkVerticalView.swift; sourceTree = "<group>"; };
 		FB7E88022C8DA566007BE5D5 /* ChartType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartType.swift; sourceTree = "<group>"; };
 		FB8D1BAB2C8D552300A74EA3 /* Exploring Charts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Exploring Charts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB8D1BAE2C8D552300A74EA3 /* Exploring_ChartsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exploring_ChartsApp.swift; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		FBD85F642C8E5404007A8650 /* AreaChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaChartVerticalView.swift; sourceTree = "<group>"; };
 		FBD85F662C8E5416007A8650 /* LineChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartVerticalView.swift; sourceTree = "<group>"; };
 		FBD85F692C8E544E007A8650 /* ChartValueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartValueHelper.swift; sourceTree = "<group>"; };
+		FBE49B9C2C93114B00100DCB /* RuleMarkHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleMarkHorizontalView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +142,8 @@
 		FB7E69182C8FC508001CB804 /* component */ = {
 			isa = PBXGroup;
 			children = (
-				FB7E69192C8FC51B001CB804 /* RuleMarkView.swift */,
+				FB7E69192C8FC51B001CB804 /* RuleMarkVerticalView.swift */,
+				FBE49B9C2C93114B00100DCB /* RuleMarkHorizontalView.swift */,
 			);
 			path = component;
 			sourceTree = "<group>";
@@ -437,7 +440,8 @@
 				FB31E1122C8EFE3700354509 /* LeftChartButtonView.swift in Sources */,
 				FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */,
 				FB49E3782C9036F0000E064F /* ChartItemModel.swift in Sources */,
-				FB7E691A2C8FC51B001CB804 /* RuleMarkView.swift in Sources */,
+				FB7E691A2C8FC51B001CB804 /* RuleMarkVerticalView.swift in Sources */,
+				FBE49B9D2C93114B00100DCB /* RuleMarkHorizontalView.swift in Sources */,
 				FB7177E22C8D805E006E9826 /* BorderedRectangleView.swift in Sources */,
 				FB8D1BAF2C8D552300A74EA3 /* Exploring_ChartsApp.swift in Sources */,
 				FB8D1BDE2C8D558000A74EA3 /* ColorExtensions.swift in Sources */,

@@ -5,7 +5,7 @@ struct ChartDemo3: View {
     
     let min: Double
     let max: Double
-    @State private var chartItem: ChartItemModel = defaultChartItem
+    @State private var chartItem: ChartItemModel = .defaultChartItem
     @State private var dailySales: [DailySalesType] = defaultDailySales
     @State private var chartType: ChartType = .bar
     @State private var isVerticalChart = true
@@ -29,7 +29,7 @@ struct ChartDemo3: View {
             } else {
                 switch(chartType) {
                 case .area: AreaChartHorizontaView(chartItem: chartItem)
-                case .bar: BarChartHorizontalView(chartItem: chartItem)
+                case .bar: BarChartHorizontalView(chartItem: $chartItem)
                 case .line: LineChartHorizontaView(chartItem: chartItem)
                 }
             }

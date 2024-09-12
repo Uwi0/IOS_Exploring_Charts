@@ -36,7 +36,7 @@ struct LeftChartButtonView: View {
 
 #Preview {
     HStack {
-        LeftChartButtonView(chartItem: .constant(defaultChartItem))
+        LeftChartButtonView(chartItem: .constant(.defaultChartItem))
         Spacer()
     }
 }

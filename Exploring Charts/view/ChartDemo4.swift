@@ -2,7 +2,7 @@ import SwiftUI
 import Charts
 
 struct ChartDemo4: View {
-    @State private var chartItem = defaultChartItem
+    @State private var chartItem: ChartItemModel = .defaultChartItem
     
     private var editModeIcon: String {
         chartItem.editMode ? "checkmark" : "square.and.pencil"
@@ -54,7 +54,7 @@ struct ChartDemo4: View {
                     } else {
                         switch(chartItem.charType) {
                         case .area: AreaChartHorizontaView(chartItem: chartItem)
-                        case .bar: BarChartHorizontalView(chartItem: chartItem)
+                        case .bar: BarChartHorizontalView(chartItem: $chartItem)
                         case .line: LineChartHorizontaView(chartItem: chartItem)
                         }
                     }

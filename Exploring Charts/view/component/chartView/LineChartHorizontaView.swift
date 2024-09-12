@@ -18,5 +18,5 @@ struct LineChartHorizontaView: View {
 }
 
 #Preview {
-    LineChartHorizontaView(chartItem: defaultChartItem)
+    LineChartHorizontaView(chartItem: .defaultChartItem)
 }

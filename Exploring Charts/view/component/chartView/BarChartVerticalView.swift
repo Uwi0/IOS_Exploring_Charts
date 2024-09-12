@@ -24,6 +24,13 @@ struct BarChartVerticalView: View {
     
     var body: some View {
         Chart {
+            if isDragging {
+                RuleMarkVerticalView(
+                    chartItem: chartItem,
+                    salesOnSelectedDay: salesOnSelectedDay
+                )
+            }
+            
             ForEach(chartItem.dailySales) { item in
                 BarMark(
                     x: valueDay(item),
@@ -37,15 +44,6 @@ struct BarChartVerticalView: View {
                         .opacity(iconOpacity)
                 }
             }
-            
-            if isDragging {
-                RuleMarkView(
-                    selectedDay: chartItem.selectedDay,
-                    salesOnSelectedDay: salesOnSelectedDay,
-                    intMode: true
-                )
-            }
-            
         }
         .chartForegroundStyleScale(range: chartItem.barColor)
         .chartYScale(domain: min ... max)
@@ -103,7 +101,7 @@ struct BarChartVerticalView: View {
 #Preview {
     VStack {
         BarChartVerticalView(
-            chartItem: .constant(defaultChartItem)
+            chartItem: .constant(.defaultChartItem)
         )
     }.padding()
 }
