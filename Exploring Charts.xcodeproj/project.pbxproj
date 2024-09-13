@@ -32,6 +32,8 @@
 		FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */; };
 		FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */; };
 		FBAA25342C93B45500ED9372 /* AnnotateLineAreaGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA25332C93B45500ED9372 /* AnnotateLineAreaGraph.swift */; };
+		FBAA25372C93B88B00ED9372 /* HorizontalChartDragModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA25362C93B88B00ED9372 /* HorizontalChartDragModifier.swift */; };
+		FBAA25392C93BA9700ED9372 /* VerticalChartDragModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA25382C93BA9700ED9372 /* VerticalChartDragModifier.swift */; };
 		FBD85F5D2C8E4E1E007A8650 /* BarChartHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F5C2C8E4E1E007A8650 /* BarChartHorizontalView.swift */; };
 		FBD85F5F2C8E4E50007A8650 /* BarChartVerticalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F5E2C8E4E50007A8650 /* BarChartVerticalView.swift */; };
 		FBD85F612C8E53DE007A8650 /* AreaChartHorizontalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD85F602C8E53DE007A8650 /* AreaChartHorizontalView.swift */; };
@@ -89,6 +91,8 @@
 		FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo1.swift; sourceTree = "<group>"; };
 		FBAA25332C93B45500ED9372 /* AnnotateLineAreaGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotateLineAreaGraph.swift; sourceTree = "<group>"; };
+		FBAA25362C93B88B00ED9372 /* HorizontalChartDragModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartDragModifier.swift; sourceTree = "<group>"; };
+		FBAA25382C93BA9700ED9372 /* VerticalChartDragModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalChartDragModifier.swift; sourceTree = "<group>"; };
 		FBD85F5C2C8E4E1E007A8650 /* BarChartHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartHorizontalView.swift; sourceTree = "<group>"; };
 		FBD85F5E2C8E4E50007A8650 /* BarChartVerticalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartVerticalView.swift; sourceTree = "<group>"; };
 		FBD85F602C8E53DE007A8650 /* AreaChartHorizontalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaChartHorizontalView.swift; sourceTree = "<group>"; };
@@ -292,9 +296,19 @@
 			path = horizontalChart;
 			sourceTree = "<group>";
 		};
+		FBAA25352C93B87400ED9372 /* modifier */ = {
+			isa = PBXGroup;
+			children = (
+				FBAA25362C93B88B00ED9372 /* HorizontalChartDragModifier.swift */,
+				FBAA25382C93BA9700ED9372 /* VerticalChartDragModifier.swift */,
+			);
+			path = modifier;
+			sourceTree = "<group>";
+		};
 		FBD85F5B2C8E4DEB007A8650 /* chartView */ = {
 			isa = PBXGroup;
 			children = (
+				FBAA25352C93B87400ED9372 /* modifier */,
 				FBAA25322C93B19B00ED9372 /* horizontalChart */,
 				FBAA25312C93B19100ED9372 /* verticalChart */,
 				FB7E69182C8FC508001CB804 /* component */,
@@ -449,6 +463,7 @@
 				FB7177E42C8D8800006E9826 /* ChartDemo2.swift in Sources */,
 				FBD85F5F2C8E4E50007A8650 /* BarChartVerticalView.swift in Sources */,
 				FB31E1142C8F01B400354509 /* RightChartButtonView.swift in Sources */,
+				FBAA25372C93B88B00ED9372 /* HorizontalChartDragModifier.swift in Sources */,
 				FB7177E62C8D9201006E9826 /* ChartDemo3.swift in Sources */,
 				FB8D1BB12C8D552300A74EA3 /* ContentView.swift in Sources */,
 				FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */,
@@ -467,6 +482,7 @@
 				FBD85F672C8E5416007A8650 /* LineChartVerticalView.swift in Sources */,
 				FBD85F652C8E5404007A8650 /* AreaChartVerticalView.swift in Sources */,
 				FB31E1102C8EFD1200354509 /* ChartDemo4.swift in Sources */,
+				FBAA25392C93BA9700ED9372 /* VerticalChartDragModifier.swift in Sources */,
 				FB7177E82C8D9238006E9826 /* DailySalesType.swift in Sources */,
 				FBAA25342C93B45500ED9372 /* AnnotateLineAreaGraph.swift in Sources */,
 			);

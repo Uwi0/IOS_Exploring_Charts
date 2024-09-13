@@ -24,7 +24,7 @@ struct ChartDemo3: View {
                 switch(chartType) {
                 case .area: AreaChartVerticalView(chartItem: chartItem)
                 case .bar: BarChartVerticalView(chartItem: $chartItem)
-                case .line: LineChartVerticalView(chartItem: chartItem)
+                case .line: LineChartVerticalView(chartItem: $chartItem)
                 }
             } else {
                 switch(chartType) {

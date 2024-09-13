@@ -49,7 +49,7 @@ struct ChartDemo4: View {
                         switch(chartItem.charType) {
                         case .area: AreaChartVerticalView(chartItem: chartItem)
                         case .bar: BarChartVerticalView(chartItem: $chartItem)
-                        case .line: LineChartVerticalView(chartItem: chartItem)
+                        case .line: LineChartVerticalView(chartItem: $chartItem)
                         }
                     } else {
                         switch(chartItem.charType) {
