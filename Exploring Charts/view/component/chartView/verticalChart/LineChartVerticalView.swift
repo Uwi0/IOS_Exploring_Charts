@@ -24,9 +24,24 @@ struct LineChartVerticalView: View {
                     y: valueSale(item)
                 )
                 .foregroundStyle(chartItem.lineAreaColor)
+                .symbol(){
+                    AnnotateLineAreaGraph(chartItem: chartItem)
+                }
                 
+                if isDragging {
+                    RuleMarkVerticalView(
+                        chartItem: chartItem,
+                        salesOnSelectedDay: salesOnSelectedDay
+                    )
+                }
             }
         }
+        .chartYScale(domain: min ... max)
+        .modifier(
+            VerticalChartDragModifier(
+                chartItem: $chartItem,
+                isDragging: $isDragging)
+        )
     }
 }
 

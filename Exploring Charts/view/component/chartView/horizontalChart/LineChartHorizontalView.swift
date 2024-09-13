@@ -28,6 +28,13 @@ struct LineChartHorizontalView: View {
                     AnnotateLineAreaGraph(chartItem: chartItem)
                 }
             }
+            
+            if isDragging {
+                RuleMarkHorizontalView(
+                    chartItem: chartItem,
+                    salesOnSelectedDay: salesOnSelectedDay
+                )
+            }
         }
         .chartXScale(domain: min ... max)
         .modifier(
