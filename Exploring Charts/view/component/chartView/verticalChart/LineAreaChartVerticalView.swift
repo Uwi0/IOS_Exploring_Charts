@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct LineChartVerticalView: View {
+struct LineAreaChartVerticalView: View {
     
     @Binding var chartItem: ChartItemModel
     @State private var isDragging: Bool = false
@@ -19,6 +19,15 @@ struct LineChartVerticalView: View {
     var body: some View {
         Chart {
             ForEach(chartItem.dailySales) { item in
+                
+                if chartItem.charType == .area {
+                    AreaMark(
+                        x: valueDay(item),
+                        y: valueSale(item)
+                    )
+                    .foregroundStyle(chartItem.lineAreaColor.opacity(0.3))
+                }
+                
                 LineMark(
                     x: valueDay(item),
                     y: valueSale(item)
@@ -46,5 +55,5 @@ struct LineChartVerticalView: View {
 }
 
 #Preview {
-    LineChartVerticalView(chartItem: .constant(.defaultChartItem))
+    LineAreaChartVerticalView(chartItem: .constant(.defaultChartItem))
 }

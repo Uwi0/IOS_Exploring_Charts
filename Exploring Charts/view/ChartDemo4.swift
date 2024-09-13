@@ -47,15 +47,13 @@ struct ChartDemo4: View {
                         .fontWeight(.semibold)
                     if chartItem.isVerticalChart {
                         switch(chartItem.charType) {
-                        case .area: AreaChartVerticalView(chartItem: chartItem)
                         case .bar: BarChartVerticalView(chartItem: $chartItem)
-                        case .line: LineChartVerticalView(chartItem: $chartItem)
+                        case .line, .area: LineAreaChartVerticalView(chartItem: $chartItem)
                         }
                     } else {
                         switch(chartItem.charType) {
-                        case .area: AreaChartHorizontalView(chartItem: chartItem)
                         case .bar: BarChartHorizontalView(chartItem: $chartItem)
-                        case .line: LineChartHorizontalView(chartItem: $chartItem)
+                        case .line, .area : LineAreaChartHorizontalView(chartItem: $chartItem)
                         }
                     }
                 }

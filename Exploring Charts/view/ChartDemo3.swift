@@ -24,13 +24,13 @@ struct ChartDemo3: View {
                 switch(chartType) {
                 case .area: AreaChartVerticalView(chartItem: chartItem)
                 case .bar: BarChartVerticalView(chartItem: $chartItem)
-                case .line: LineChartVerticalView(chartItem: $chartItem)
+                case .line: LineAreaChartVerticalView(chartItem: $chartItem)
                 }
             } else {
                 switch(chartType) {
                 case .area: AreaChartHorizontalView(chartItem: chartItem)
                 case .bar: BarChartHorizontalView(chartItem: $chartItem)
-                case .line: LineChartHorizontalView(chartItem: $chartItem)
+                case .line: LineAreaChartHorizontalView(chartItem: $chartItem)
                 }
             }
             

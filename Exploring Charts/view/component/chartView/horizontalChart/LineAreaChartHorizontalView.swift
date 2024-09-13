@@ -1,7 +1,7 @@
 import SwiftUI
 import Charts
 
-struct LineChartHorizontalView: View {
+struct LineAreaChartHorizontalView: View {
     
     private let min: Double = 0
     private let max: Double = 1000
@@ -19,6 +19,15 @@ struct LineChartHorizontalView: View {
     var body: some View {
         Chart {
             ForEach(chartItem.dailySales) { item in
+                
+                if chartItem.charType == .area {
+                    AreaMark(
+                        x: valueSale(item),
+                        y: valueDay(item)
+                    )
+                    .foregroundStyle(chartItem.lineAreaColor.opacity(0.3))
+                }
+                
                 LineMark(
                     x: valueSale(item),
                     y: valueDay(item)
@@ -47,5 +56,5 @@ struct LineChartHorizontalView: View {
 }
 
 #Preview {
-    LineChartHorizontalView(chartItem: .constant(.defaultChartItem))
+    LineAreaChartHorizontalView(chartItem: .constant(.defaultChartItem))
 }
