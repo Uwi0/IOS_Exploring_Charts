@@ -23,7 +23,7 @@ struct LeftChartButtonView: View {
             }
             Spacer()
             ColorfulButtonView(
-                colors: $chartItem.barColor,
+                chartItem: $chartItem,
                 dim: 30,
                 offset: 10,
                 action: {}

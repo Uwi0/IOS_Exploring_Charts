@@ -31,6 +31,7 @@
 		FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */; };
 		FB8D1BE82C8D597E00A74EA3 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */; };
 		FB8D1BEA2C8D599700A74EA3 /* ChartDemo1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */; };
+		FB9EAA742C940F7E00BE8E2D /* DefaultColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9EAA732C940F7E00BE8E2D /* DefaultColor.swift */; };
 		FBAA25342C93B45500ED9372 /* AnnotateLineAreaGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA25332C93B45500ED9372 /* AnnotateLineAreaGraph.swift */; };
 		FBAA25372C93B88B00ED9372 /* HorizontalChartDragModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA25362C93B88B00ED9372 /* HorizontalChartDragModifier.swift */; };
 		FBAA25392C93BA9700ED9372 /* VerticalChartDragModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBAA25382C93BA9700ED9372 /* VerticalChartDragModifier.swift */; };
@@ -90,6 +91,7 @@
 		FB8D1BE52C8D593A00A74EA3 /* RandomArcFromColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomArcFromColorsView.swift; sourceTree = "<group>"; };
 		FB8D1BE72C8D597E00A74EA3 /* ArcView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
 		FB8D1BE92C8D599700A74EA3 /* ChartDemo1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemo1.swift; sourceTree = "<group>"; };
+		FB9EAA732C940F7E00BE8E2D /* DefaultColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultColor.swift; sourceTree = "<group>"; };
 		FBAA25332C93B45500ED9372 /* AnnotateLineAreaGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotateLineAreaGraph.swift; sourceTree = "<group>"; };
 		FBAA25362C93B88B00ED9372 /* HorizontalChartDragModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalChartDragModifier.swift; sourceTree = "<group>"; };
 		FBAA25382C93BA9700ED9372 /* VerticalChartDragModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalChartDragModifier.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 		FB8D1BDA2C8D555F00A74EA3 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				FB9EAA732C940F7E00BE8E2D /* DefaultColor.swift */,
 				FB7177E72C8D9238006E9826 /* DailySalesType.swift */,
 				FB7E88022C8DA566007BE5D5 /* ChartType.swift */,
 				FB209F9B2C8F9BB400642377 /* ButtonAlignmentModel.swift */,
@@ -456,6 +459,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBD85F612C8E53DE007A8650 /* AreaChartHorizontalView.swift in Sources */,
+				FB9EAA742C940F7E00BE8E2D /* DefaultColor.swift in Sources */,
 				FB209F9C2C8F9BB400642377 /* ButtonAlignmentModel.swift in Sources */,
 				FB8D1BE42C8D591400A74EA3 /* ColorfulButtonView.swift in Sources */,
 				FB8D1BE62C8D593A00A74EA3 /* RandomArcFromColorsView.swift in Sources */,

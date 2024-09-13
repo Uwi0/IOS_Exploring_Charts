@@ -1,7 +1,8 @@
 import SwiftUI
 
 struct ColorfulButtonView: View {
-    @Binding var colors: [Color]
+    
+    @Binding var chartItem: ChartItemModel
     @State private var flip: Bool = false
     
     let dim: CGFloat
@@ -9,32 +10,45 @@ struct ColorfulButtonView: View {
     let action: () -> Void
     
     private var count: CGFloat {
-        CGFloat(colors.count)
+        CGFloat(chartItem.barColor.count)
     }
     private var factor: CGFloat {
         (dim - offset) / count
     }
     private var lastColor: Color {
-        colors.last ?? .black
+        chartItem.barColor.last ?? .black
     }
     private var degress: Angle {
         flip ? .zero : .degrees(180)
     }
+    private var randomColor: [Color] {
+        Color.randomColorsN(n: chartItem.barColor.count)
+    }
+    private var itemCount: Int {
+        chartItem.barColor.count
+    }
     
     var body: some View {
         ZStack {
-            ForEach(0 ..< colors.count, id: \.self) { i in
-                RandomArcFromColorsView(
-                    colors: colors,
-                    index: i,
-                    minRadius: minRadius(i: i),
-                    maxRadius: maxRadius(i: i),
-                    opacity: 0.9
-                )
+            if chartItem.charType == .bar {
+                ForEach(0 ..< itemCount, id: \.self) { i in
+                    RandomArcFromColorsView(
+                        colors: chartItem.barColor,
+                        index: i,
+                        minRadius: minRadius(i: i),
+                        maxRadius: maxRadius(i: i),
+                        opacity: 0.9
+                    )
+                }
+                Circle()
+                    .stroke(lastColor, lineWidth: factor)
+                    .frame(width: dim, height: dim)
+            } else {
+                Circle()
+                    .fill(chartItem.lineAreaColor)
+                    .frame(width: dim, height: dim)
             }
-            Circle()
-                .stroke(lastColor, lineWidth: factor)
-                .frame(width: dim, height: dim)
+            
         }
         .rotation3DEffect(
             degress,
@@ -45,7 +59,11 @@ struct ColorfulButtonView: View {
             )
         )
         .onTapGesture {
-            colors = Color.randomColorsN(n: colors.count)
+            if chartItem.charType == .bar {
+                chartItem.barColor = randomColor
+            } else {
+                chartItem.lineAreaColor = Color.random(colorList: colorsForLineAndArea)
+            }
             withAnimation {
                 flip.toggle()
             }
@@ -64,7 +82,7 @@ struct ColorfulButtonView: View {
 
 #Preview {
     ColorfulButtonView(
-        colors: .constant(Color.defaultColors),
+        chartItem: .constant(.defaultChartItem),
         dim: 40,
         offset: 10,
         action: {

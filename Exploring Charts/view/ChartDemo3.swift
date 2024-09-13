@@ -36,7 +36,7 @@ struct ChartDemo3: View {
             
             HStack {
                 ColorfulButtonView(
-                    colors: $barColors,
+                    chartItem: $chartItem,
                     dim: 30,
                     offset: 10,
                     action: {

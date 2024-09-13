@@ -1,13 +1,13 @@
 import SwiftUI
 
 struct ChartDemo1: View {
-    @State var colors: [Color]
     
+    @State private var chartItem: ChartItemModel = .defaultChartItem
     @State private var rotateBar: Bool = false
     @State private var tilt: CGFloat = 0.0
     private let threshold = 30.0
     private var count: CGFloat {
-        CGFloat(colors.count)
+        CGFloat(chartItem.barColor.count)
     }
     private var barWidth: CGFloat {
         (UIScreen.main.bounds.width / count) - 5
@@ -23,7 +23,7 @@ struct ChartDemo1: View {
     var body: some View {
         NavigationStack {
             HStack(alignment: .bottom, spacing: 3) {
-                ForEach(colors, id: \.self) { color in
+                ForEach(chartItem.barColor, id: \.self) { color in
                     let height = Double.random(in: 50...200)
                     BorderedRectangleView(
                         color: color,
@@ -50,7 +50,7 @@ struct ChartDemo1: View {
             .toolbar() {
                 ToolbarItem(placement: .bottomBar) {
                     ColorfulButtonView(
-                        colors: $colors,
+                        chartItem: $chartItem,
                         dim: 50,
                         offset: 10,
                         action: {
@@ -77,5 +77,5 @@ struct ChartDemo1: View {
 }
 
 #Preview {
-    ChartDemo1(colors: Color.defaultColors)
+    ChartDemo1()
 }

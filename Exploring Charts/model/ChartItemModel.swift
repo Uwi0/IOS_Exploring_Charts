@@ -16,7 +16,7 @@ struct ChartItemModel: Identifiable {
     static let defaultChartItem = ChartItemModel(
         dailySales: defaultDailySales,
         barColor: defaultBarColors,
-        editMode: true,
+        editMode: false,
         selectedDay: "Sun",
         title: "Chart 4 Demo",
         titleAlignment: .leading,
